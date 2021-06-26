@@ -151,7 +151,7 @@ scrub
 
     usage: run.py [-h] [--verbose] [--silent] [--overwrite] [--backup]
                   [--urls [url [url ...]]] [--itemids [itemids [itemids ...]]]
-                  [--stock01 5] [--stock12 5]
+                  [--stock01 5] [--stock12 5] [--threads int]
                   [stub]
     
     Create item database.
@@ -171,4 +171,5 @@ scrub
                             a list of item ids
       --stock01 5           default stock for singles
       --stock12 5           default stock for stacks
+      --threads int         the number of threads to use (default 1)
     

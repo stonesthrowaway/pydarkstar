@@ -19,7 +19,7 @@ A set of command-line tools for interacting with a Darkstar server.
 
 Please note that this project was developed for the original
 `darkstar <https://github.com/DarkstarProject/darkstar>`__ server. That
-project was archived and forked a few time. This project may work with
+project was archived and forked a few times. This project may work with
 the forks if the AH implementation remains unchanged.
 
 +------------------------------------------------------------+
