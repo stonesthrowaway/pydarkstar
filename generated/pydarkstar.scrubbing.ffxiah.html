@@ -1,191 +1,164 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>scrubbing.ffxiah &mdash; pydarkstar 3.0.0 documentation</title>
-  
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
+      <title>scrubbing.ffxiah</title>
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="scrubbing.scrubber" href="pydarkstar.scrubbing.scrubber.html" />
-    <link rel="prev" title="scrubbing" href="pydarkstar.scrubbing.html" /> 
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home"> pydarkstar
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                3.0.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="pydarkstar.html">Code</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="pydarkstar.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.auction.html">auction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.options.html">options</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="pydarkstar.scrubbing.html">scrubbing</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="pydarkstar.scrubbing.html#submodules">Submodules</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.tables.html">tables</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#submodules">Submodules</a></li>
-</ul>
-</li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">pydarkstar</a>
-        
-      </nav>
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="scrubbing.scrubber" href="pydarkstar.scrubbing.scrubber.html" />
+  <link rel="prev" title="scrubbing" href="pydarkstar.scrubbing.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">pydarkstar</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
 
 
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="pydarkstar.html">pydarkstar</a> &raquo;</li>
-        
-          <li><a href="pydarkstar.scrubbing.html">scrubbing</a> &raquo;</li>
-        
-      <li>scrubbing.ffxiah</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
+          <navlinks>
             
-            <a href="../_sources/generated/pydarkstar.scrubbing.ffxiah.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
 
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
   
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#command-line">command line</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="setup.html" class="reference internal ">Setup</a>
+
             
-  <div class="section" id="module-pydarkstar.scrubbing.ffxiah">
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="usage.html" class="reference internal ">Usage</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="apps.html" class="reference internal ">Apps</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="requirements.html" class="reference internal ">Requirements</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="advanced.html" class="reference internal ">Advanced</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="pydarkstar.html" class="reference internal ">Code</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="pydarkstar.html">pydarkstar</a> &raquo;</li>
+    
+      <li><a href="pydarkstar.scrubbing.html">scrubbing</a> &raquo;</li>
+    
+    <li>scrubbing.ffxiah</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="pydarkstar.scrubbing.html"
+       title="previous chapter">← scrubbing</a>
+  </li>
+  <li class="next">
+    <a href="pydarkstar.scrubbing.scrubber.html"
+       title="next chapter">scrubbing.scrubber →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="module-pydarkstar.scrubbing.ffxiah">
 <span id="scrubbing-ffxiah"></span><h1>scrubbing.ffxiah<a class="headerlink" href="#module-pydarkstar.scrubbing.ffxiah" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber">
-<em class="property">class </em><code class="sig-prename descclassname">pydarkstar.scrubbing.ffxiah.</code><code class="sig-name descname">FFXIAHScrubber</code><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pydarkstar.scrubbing.ffxiah.</span></span><span class="sig-name descname"><span class="pre">FFXIAHScrubber</span></span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get item data from ffxiah.com</p>
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.save">
-<em class="property">property </em><code class="sig-name descname">save</code><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.save" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.save">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">save</span></span><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.save" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.scrub">
-<code class="sig-name descname">scrub</code><span class="sig-paren">(</span><em class="sig-param">force=False</em>, <em class="sig-param">threads=-1</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">ids=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber.scrub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.scrub" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.scrub">
+<span class="sig-name descname"><span class="pre">scrub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber.scrub"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.scrub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get item metadata main function.</p>
 <p>If the pkl files exist (from a previous run of this function), then the ids and/or data
 will just be loaded from those pkl files.  The force option allows you to ignore the
@@ -195,179 +168,47 @@ can be generated automatically, in which case all possible items will be downloa
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – ignore existing data and redownload</p></li>
-<li><p><strong>threads</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – number of cpu threads to use while downloading</p></li>
-<li><p><strong>urls</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a>) – list of category urls</p></li>
-<li><p><strong>ids</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.7)"><em>set</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.7)"><em>None</em></a>) – set of item ids</p></li>
+<li><p><strong>force</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – ignore existing data and redownload</p></li>
+<li><p><strong>threads</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – number of cpu threads to use while downloading</p></li>
+<li><p><strong>urls</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a>) – list of category urls</p></li>
+<li><p><strong>ids</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.9)"><em>set</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a>) – set of item ids</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._load_item_ids">
-<code class="sig-name descname">_load_item_ids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._load_item_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._load_item_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load item ids from pkl file.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._load_item_dat">
-<code class="sig-name descname">_load_item_dat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._load_item_dat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._load_item_dat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load item dat from pkl file.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._save_item_ids">
-<code class="sig-name descname">_save_item_ids</code><span class="sig-paren">(</span><em class="sig-param">ids</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._save_item_ids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._save_item_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>save item ids to pkl file.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._save_item_dat">
-<code class="sig-name descname">_save_item_dat</code><span class="sig-paren">(</span><em class="sig-param">dat</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._save_item_dat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._save_item_dat" title="Permalink to this definition">¶</a></dt>
-<dd><p>save item dat to pkl file.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_category_urls">
-<code class="sig-name descname">_get_category_urls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._get_category_urls"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_category_urls" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Parse <a class="reference external" href="http://www.ffxiah.com/browse">http://www.ffxiah.com/browse</a> to get URLs of the</dt><dd><p>form <a class="reference external" href="http://www.ffxiah.com">http://www.ffxiah.com</a>/{CategoryNumber}</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_itemids">
-<code class="sig-name descname">_get_itemids</code><span class="sig-paren">(</span><em class="sig-param">urls</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._get_itemids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_itemids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scrub urls of the form <a class="reference external" href="http://www.ffxiah.com">http://www.ffxiah.com</a>/{CategoryNumber} for itemids.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>urls</strong> – category urls</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_itemids_for_category_url">
-<code class="sig-name descname">_get_itemids_for_category_url</code><span class="sig-paren">(</span><em class="sig-param">url</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._get_itemids_for_category_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_itemids_for_category_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scrub url of the form <a class="reference external" href="http://www.ffxiah.com">http://www.ffxiah.com</a>/{CategoryNumber} for itemids.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>url</strong> – category url</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data">
-<code class="sig-name descname">_get_item_data</code><span class="sig-paren">(</span><em class="sig-param">itemids</em>, <em class="sig-param">threads=-1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._get_item_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get metadata for many items.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>itemids</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.7)"><em>set</em></a>) – item numbers</p></li>
-<li><p><strong>threads</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – number of cpu threads to use</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data_for_itemid">
-<code class="sig-name descname">_get_item_data_for_itemid</code><span class="sig-paren">(</span><em class="sig-param">itemid</em>, <em class="sig-param">index=0</em>, <em class="sig-param">total=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._get_item_data_for_itemid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data_for_itemid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get metadata for single item.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>itemid</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – item number</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data_for_itemid_map">
-<code class="sig-name descname">_get_item_data_for_itemid_map</code><span class="sig-paren">(</span><em class="sig-param">args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._get_item_data_for_itemid_map"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data_for_itemid_map" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._create_item_url">
-<em class="property">static </em><code class="sig-name descname">_create_item_url</code><span class="sig-paren">(</span><em class="sig-param">itemid</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._create_item_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._create_item_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create URL from itemid.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>itemid</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – item number</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._fix_stack_price_key">
-<em class="property">static </em><code class="sig-name descname">_fix_stack_price_key</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#FFXIAHScrubber._fix_stack_price_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._fix_stack_price_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fix dictionary key.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a>) – dictionary</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.scrubbing.ffxiah.extract">
-<code class="sig-prename descclassname">pydarkstar.scrubbing.ffxiah.</code><code class="sig-name descname">extract</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">itemid</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#extract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.extract" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydarkstar.scrubbing.ffxiah.extract">
+<span class="sig-prename descclassname"><span class="pre">pydarkstar.scrubbing.ffxiah.</span></span><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itemid</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/ffxiah.html#extract"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.scrubbing.ffxiah.extract" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract item data from scrubbed info.</p>
 </dd></dl>
 
-</div>
+</section>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="pydarkstar.scrubbing.scrubber.html" class="btn btn-neutral float-right" title="scrubbing.scrubber" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pydarkstar.scrubbing.html" class="btn btn-neutral float-left" title="scrubbing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Adam Gagorik
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="pydarkstar.scrubbing.html"
+       title="previous chapter">← scrubbing</a>
+  </li>
+  <li class="next">
+    <a href="pydarkstar.scrubbing.scrubber.html"
+       title="next chapter">scrubbing.scrubber →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Adam Gagorik.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.7.3.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
     
-   
-
-</body>
+    
+  </body>
 </html>

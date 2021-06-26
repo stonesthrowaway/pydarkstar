@@ -1,7 +1,7 @@
 Advanced
 ========
 
-.. _shell-scripts-:-pythonpath:
+.. _shell-scripts--pythonpath:
 
 Shell Scripts : PYTHONPATH
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -17,7 +17,7 @@ The process of setting the PYTHONPATH is not needed in the case that
 pydarkstar is in the current directory of an executing python
 interpreter.
 
-.. _shell-scripts-:-anaconda-environment:
+.. _shell-scripts--anaconda-environment:
 
 Shell Scripts : Anaconda Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -67,7 +67,7 @@ Windows
    conda activate pydarkstar
    python3 -m pydarkstar.apps.scrub.run %*
 
-.. _shell-scripts-:-running-apps:
+.. _shell-scripts--running-apps:
 
 Shell Scripts : Running Apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -92,4 +92,3 @@ the apps.
    bash:~$ cd /path/to/pydarkstar
    bash:~$ conda activate pydarkstar
    bash:~$ python3 ./pydarkstar/apps/scrub/run.py --help
-

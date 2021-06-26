@@ -3,8 +3,6 @@ Setup
 
 This is a giude to getting pydarkstar running.
 
-.. _step-0:-install-git-and-clone-pydarkstar:
-
 Step 0: Install Git and Clone pydarkstar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -13,15 +11,11 @@ Step 0: Install Git and Clone pydarkstar
 -  Clone the pydarkstar repository from
    `here <https://github.com/AdamGagorik/pydarkstar>`__
 
-.. _step-1:-install-python-anaconda:
-
 Step 1: Install Python Anaconda
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  Install `Python Anaconda <http://continuum.io/downloads>`__
+-  Install `Python Anaconda <https://www.anaconda.com>`__
 -  You need **Python3.7** or greater.
-
-.. _step-2:-create-python-environment:
 
 Step 2: Create Python Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,8 +38,6 @@ Step 2: Create Python Environment
    bash:~$ cd /path/to/pydarkstar/bin
    bash:~$ conda env remove --name pydarkstar
    bash:~$ conda env create -f environment.yml
-
-.. _step-3:-configure-pydarkstar:
 
 Step 3: Configure pydarkstar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

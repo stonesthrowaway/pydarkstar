@@ -25,4 +25,3 @@ Anaconda Environment
    > cd /D "C:\path\to\pydarkstar\bin"
    > conda env remove --name pydarkstar
    > conda env create -f environment.yml
-

@@ -13,6 +13,25 @@ A set of command-line tools for interacting with a Darkstar server.
 -  The **Usage** instructions can be found
    `here <http://adamgagorik.github.io/pydarkstar/generated/usage.html>`__.
 
+--------------
+
+Please note that this project was developed for the original
+`darkstar <https://github.com/DarkstarProject/darkstar>`__ server. That
+project was archived and forked a few time. This project may work with
+the forks if the AH implementation remains unchanged.
+
++------------------------------------------------------------+
+| Project                                                    |
++============================================================+
+| `darkstar <https://github.com/DarkstarProject/darkstar>`__ |
++------------------------------------------------------------+
+| `topaz <https://github.com/project-topaz/topaz>`__         |
++------------------------------------------------------------+
+| `topaz-next <https://github.com/topaz-next/topaz>`__       |
++------------------------------------------------------------+
+
+--------------
+
 `Features <http://adamgagorik.github.io/pydarkstar>`__
 ------------------------------------------------------
 

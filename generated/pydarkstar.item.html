@@ -1,195 +1,163 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>item &mdash; pydarkstar 3.0.0 documentation</title>
-  
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
+      <title>item</title>
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="itemlist" href="pydarkstar.itemlist.html" />
-    <link rel="prev" title="database" href="pydarkstar.database.html" /> 
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home"> pydarkstar
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                3.0.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="pydarkstar.html">Code</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#subpackages">Subpackages</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="pydarkstar.html#submodules">Submodules</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.common.html">common</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.darkobject.html">darkobject</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.database.html">database</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">item</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.itemlist.html">itemlist</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.logutils.html">logutils</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pydarkstar.timeutils.html">timeutils</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">pydarkstar</a>
-        
-      </nav>
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="itemlist" href="pydarkstar.itemlist.html" />
+  <link rel="prev" title="database" href="pydarkstar.database.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">pydarkstar</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
 
 
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="pydarkstar.html">pydarkstar</a> &raquo;</li>
-        
-      <li>item</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
+          <navlinks>
             
-            <a href="../_sources/generated/pydarkstar.item.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
 
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
   
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#command-line">command line</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="setup.html" class="reference internal ">Setup</a>
+
             
-  <div class="section" id="module-pydarkstar.item">
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="usage.html" class="reference internal ">Usage</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="apps.html" class="reference internal ">Apps</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="requirements.html" class="reference internal ">Requirements</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="advanced.html" class="reference internal ">Advanced</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="pydarkstar.html" class="reference internal ">Code</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      <li><a href="pydarkstar.html">pydarkstar</a> &raquo;</li>
+    
+    <li>item</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="pydarkstar.database.html"
+       title="previous chapter">← database</a>
+  </li>
+  <li class="next">
+    <a href="pydarkstar.itemlist.html"
+       title="next chapter">itemlist →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="module-pydarkstar.item">
 <span id="item"></span><h1>item<a class="headerlink" href="#module-pydarkstar.item" title="Permalink to this headline">¶</a></h1>
-<dl class="data">
-<dt id="pydarkstar.item.fmt">
-<code class="sig-prename descclassname">pydarkstar.item.</code><code class="sig-name descname">fmt</code><em class="property"> = {'buy01': '{:&gt;6}', 'buy12': '{:&gt;6}', 'itemid': '{:&gt;8}', 'name': '{:&gt;24}', 'price01': '{:&gt;16}', 'price12': '{:&gt;16}', 'rate01': '{:&gt;7}', 'rate12': '{:&gt;7}', 'sell01': '{:&gt;6}', 'sell12': '{:&gt;6}', 'stock01': '{:&gt;7}', 'stock12': '{:&gt;7}'}</em><a class="headerlink" href="#pydarkstar.item.fmt" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydarkstar.item.title_str">
+<span class="sig-prename descclassname"><span class="pre">pydarkstar.item.</span></span><span class="sig-name descname"><span class="pre">title_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/item.html#title_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.item.title_str" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="pydarkstar.item.title_str">
-<code class="sig-prename descclassname">pydarkstar.item.</code><code class="sig-name descname">title_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/item.html#title_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.item.title_str" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydarkstar.item.value_str">
+<span class="sig-prename descclassname"><span class="pre">pydarkstar.item.</span></span><span class="sig-name descname"><span class="pre">value_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/item.html#value_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.item.value_str" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="pydarkstar.item.value_str">
-<code class="sig-prename descclassname">pydarkstar.item.</code><code class="sig-name descname">value_str</code><span class="sig-paren">(</span><em class="sig-param">item</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/item.html#value_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.item.value_str" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="class">
-<dt id="pydarkstar.item.Item">
-<em class="property">class </em><code class="sig-prename descclassname">pydarkstar.item.</code><code class="sig-name descname">Item</code><span class="sig-paren">(</span><em class="sig-param">itemid</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sell01=None</em>, <em class="sig-param">buy01=None</em>, <em class="sig-param">price01=None</em>, <em class="sig-param">stock01=None</em>, <em class="sig-param">rate01=None</em>, <em class="sig-param">sell12=None</em>, <em class="sig-param">buy12=None</em>, <em class="sig-param">price12=None</em>, <em class="sig-param">stock12=None</em>, <em class="sig-param">rate12=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/item.html#Item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.item.Item" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="pydarkstar.item.Item">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pydarkstar.item.</span></span><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">itemid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sell01</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buy01</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price01</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stock01</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate01</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sell12</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buy12</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price12</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stock12</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate12</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/item.html#Item"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.item.Item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Item properties.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -207,132 +175,102 @@
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
-<dt id="pydarkstar.item.Item.keys">
-<code class="sig-name descname">keys</code><em class="property"> = ['itemid', 'name', 'sell01', 'buy01', 'price01', 'stock01', 'rate01', 'sell12', 'buy12', 'price12', 'stock12', 'rate12']</em><a class="headerlink" href="#pydarkstar.item.Item.keys" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><em class="property"> <span class="pre">=</span> <span class="pre">['itemid',</span> <span class="pre">'name',</span> <span class="pre">'sell01',</span> <span class="pre">'buy01',</span> <span class="pre">'price01',</span> <span class="pre">'stock01',</span> <span class="pre">'rate01',</span> <span class="pre">'sell12',</span> <span class="pre">'buy12',</span> <span class="pre">'price12',</span> <span class="pre">'stock12',</span> <span class="pre">'rate12']</span></em><a class="headerlink" href="#pydarkstar.item.Item.keys" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.values">
-<em class="property">property </em><code class="sig-name descname">values</code><a class="headerlink" href="#pydarkstar.item.Item.values" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.values">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">values</span></span><a class="headerlink" href="#pydarkstar.item.Item.values" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item._init_notify">
-<code class="sig-name descname">_init_notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/item.html#Item._init_notify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.item.Item._init_notify" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.itemid">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">itemid</span></span><a class="headerlink" href="#pydarkstar.item.Item.itemid" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.itemid">
-<em class="property">property </em><code class="sig-name descname">itemid</code><a class="headerlink" href="#pydarkstar.item.Item.itemid" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydarkstar.item.Item.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.name">
-<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pydarkstar.item.Item.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.sell01">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sell01</span></span><a class="headerlink" href="#pydarkstar.item.Item.sell01" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.sell01">
-<em class="property">property </em><code class="sig-name descname">sell01</code><a class="headerlink" href="#pydarkstar.item.Item.sell01" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.buy01">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">buy01</span></span><a class="headerlink" href="#pydarkstar.item.Item.buy01" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.buy01">
-<em class="property">property </em><code class="sig-name descname">buy01</code><a class="headerlink" href="#pydarkstar.item.Item.buy01" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.price01">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">price01</span></span><a class="headerlink" href="#pydarkstar.item.Item.price01" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.price01">
-<em class="property">property </em><code class="sig-name descname">price01</code><a class="headerlink" href="#pydarkstar.item.Item.price01" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.stock01">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stock01</span></span><a class="headerlink" href="#pydarkstar.item.Item.stock01" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.stock01">
-<em class="property">property </em><code class="sig-name descname">stock01</code><a class="headerlink" href="#pydarkstar.item.Item.stock01" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.rate01">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">rate01</span></span><a class="headerlink" href="#pydarkstar.item.Item.rate01" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.rate01">
-<em class="property">property </em><code class="sig-name descname">rate01</code><a class="headerlink" href="#pydarkstar.item.Item.rate01" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.sell12">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sell12</span></span><a class="headerlink" href="#pydarkstar.item.Item.sell12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.sell12">
-<em class="property">property </em><code class="sig-name descname">sell12</code><a class="headerlink" href="#pydarkstar.item.Item.sell12" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.buy12">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">buy12</span></span><a class="headerlink" href="#pydarkstar.item.Item.buy12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.buy12">
-<em class="property">property </em><code class="sig-name descname">buy12</code><a class="headerlink" href="#pydarkstar.item.Item.buy12" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.price12">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">price12</span></span><a class="headerlink" href="#pydarkstar.item.Item.price12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.price12">
-<em class="property">property </em><code class="sig-name descname">price12</code><a class="headerlink" href="#pydarkstar.item.Item.price12" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.stock12">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stock12</span></span><a class="headerlink" href="#pydarkstar.item.Item.stock12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.item.Item.stock12">
-<em class="property">property </em><code class="sig-name descname">stock12</code><a class="headerlink" href="#pydarkstar.item.Item.stock12" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.item.Item.rate12">
-<em class="property">property </em><code class="sig-name descname">rate12</code><a class="headerlink" href="#pydarkstar.item.Item.rate12" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="pydarkstar.item.Item.rate12">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">rate12</span></span><a class="headerlink" href="#pydarkstar.item.Item.rate12" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="pydarkstar.itemlist.html" class="btn btn-neutral float-right" title="itemlist" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pydarkstar.database.html" class="btn btn-neutral float-left" title="database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Adam Gagorik
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="pydarkstar.database.html"
+       title="previous chapter">← database</a>
+  </li>
+  <li class="next">
+    <a href="pydarkstar.itemlist.html"
+       title="next chapter">itemlist →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Adam Gagorik.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.7.3.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
     
-   
-
-</body>
+    
+  </body>
 </html>
