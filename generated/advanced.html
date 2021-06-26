@@ -1,157 +1,173 @@
-<!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="pydarkstar" href="pydarkstar.html" /><link rel="prev" title="Requirements" href="requirements.html" />
 
-      <title>Advanced</title>
+    <meta name="generator" content="sphinx-4.0.2, furo 2021.06.24.beta37"/>
+        <title>Advanced - pydarkstar</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css" />
     
-          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
-      
-      <!-- sphinx script_files -->
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
 
-      
-      <!-- bundled in js (rollup iife) -->
-      <!-- <script src="../_static/theme-vendors.js"></script> -->
-      <script src="../_static/theme.js" defer></script>
+
+<style>
+  :root {
+    --color-code-background: #111111;
+  --color-code-foreground: #ffffff;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #111111;
+  --color-code-foreground: #ffffff;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css"></head>
+  <body dir="">
     
-  <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="search" title="Search" href="../search.html" />
-  <link rel="next" title="pydarkstar" href="pydarkstar.html" />
-  <link rel="prev" title="Requirements" href="requirements.html" /> 
-  </head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
 
-  <body>
-    <div id="app">
-    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
-  <router-link to="../index.html" class="home-link">
-    
-      <span class="site-name">pydarkstar</span>
-    
-  </router-link>
-
-  <div class="links">
-    <navlinks class="can-hide">
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
 
 
 
-    </navlinks>
-  </div>
-</navbar>
-
-      
-      <div class="sidebar-mask" @click="toggleSidebar(false)">
-      </div>
-        <sidebar @toggle-sidebar="toggleSidebar">
-          
-          <navlinks>
-            
-
-
-
-            
-          </navlinks><div id="searchbox" class="searchbox" role="search">
-  <div class="caption"><span class="caption-text">Quick search</span>
-    <div class="searchformwrapper">
-      <form class="search" action="../search.html" method="get">
-        <input type="text" name="q" />
-        <input type="submit" value="Search" />
-        <input type="hidden" name="check_keywords" value="yes" />
-        <input type="hidden" name="area" value="default" />
-      </form>
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
     </div>
-  </div>
-</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
-  
-    <div class="sidebar-group">
-      <p class="caption">
-        <span class="caption-text"><a href="../index.html#command-line">command line</a></span>
-      </p>
-      <ul class="current">
-        
-          <li class="toctree-l1 "><a href="setup.html" class="reference internal ">Setup</a>
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 "><a href="usage.html" class="reference internal ">Usage</a>
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 "><a href="apps.html" class="reference internal ">Apps</a>
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 "><a href="requirements.html" class="reference internal ">Requirements</a>
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 current"><a href="#" class="reference internal current">Advanced</a>
-
-            
-              <ul>
-                
-                  <li class="toctree-l2"><a href="#shell-scripts-pythonpath" class="reference internal">Shell Scripts : PYTHONPATH</a></li>
-                
-                  <li class="toctree-l2"><a href="#shell-scripts-anaconda-environment" class="reference internal">Shell Scripts : Anaconda Environment</a></li>
-                
-                  <li class="toctree-l2"><a href="#shell-scripts-running-apps" class="reference internal">Shell Scripts : Running Apps</a></li>
-                
-              </ul>
-            
-          </li>
-
-        
-          <li class="toctree-l1 "><a href="pydarkstar.html" class="reference internal ">Code</a>
-
-            
-          </li>
-
-        
-      </ul>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">pydarkstar</div></a>
     </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
-</div>
-        </sidebar>
-
-      <page>
-          <div class="body-header" role="navigation" aria-label="navigation">
   
-  <ul class="breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-    
-    <li>Advanced</li>
-  </ul>
+  <span class="sidebar-brand-text">pydarkstar</span>
   
-
-  <ul class="page-nav">
-  <li class="prev">
-    <a href="requirements.html"
-       title="previous chapter">← Requirements</a>
-  </li>
-  <li class="next">
-    <a href="pydarkstar.html"
-       title="next chapter">pydarkstar →</a>
-  </li>
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Advanced</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pydarkstar.html">Code</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pydarkstar.auction.html">auction</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.auction.browser.html">auction.browser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.auction.buyer.html">auction.buyer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.auction.cleaner.html">auction.cleaner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.auction.manager.html">auction.manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.auction.seller.html">auction.seller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.auction.worker.html">auction.worker</a></li>
 </ul>
-  
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pydarkstar.options.html">options</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.options.ah.html">options.ah</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.options.base.html">options.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.options.basic.html">options.basic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.options.input.html">options.input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.options.output.html">options.output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.options.sql.html">options.sql</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pydarkstar.scrubbing.html">scrubbing</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.scrubbing.ffxiah.html">scrubbing.ffxiah</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.scrubbing.scrubber.html">scrubbing.scrubber</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pydarkstar.tables.html">tables</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.tables.auctionhouse.html">tables.auctionhouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.tables.base.html">tables.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.tables.deliverybox.html">tables.deliverybox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.common.html">common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.darkobject.html">darkobject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.database.html">database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.item.html">item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.itemlist.html">itemlist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.logutils.html">logutils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.timeutils.html">timeutils</a></li>
+</ul>
+</li>
+</ul>
+
 </div>
-<hr>
-          <div class="content" role="main" v-pre>
-            
-  <section id="advanced">
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <section id="advanced">
 <h1>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h1>
 <section id="shell-scripts-pythonpath">
 <span id="id1"></span><h2>Shell Scripts : PYTHONPATH<a class="headerlink" href="#shell-scripts-pythonpath" title="Permalink to this headline">¶</a></h2>
@@ -203,7 +219,7 @@ python -m pydarkstar.apps.scrub.run <span class="nv">$*</span>
 when quotes are not used.</p></li>
 </ul>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">ECHO</span> OFF
-<span class="k">set</span> <span class="nv">PYTHONPATH</span><span class="p">=</span><span class="s2">&quot;</span><span class="nv">%PYTHONPATH%</span><span class="s2">;C:\Path\To\pydarkstar&quot;</span>
+<span class="k">set</span> <span class="nv">PYTHONPATH</span><span class="p">=</span><span class="s2">"</span><span class="nv">%PYTHONPATH%</span><span class="s2">;C:\Path\To\pydarkstar"</span>
 conda activate pydarkstar
 python3 -m pydarkstar.apps.scrub.run <span class="nv">%*</span>
 </pre></div>
@@ -235,28 +251,83 @@ bash:~$ python3 ./pydarkstar/apps/scrub/run.py --help
 </section>
 </section>
 
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="pydarkstar.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">pydarkstar</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="requirements.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Requirements</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2019, Adam Gagorik
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/generated/advanced.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Advanced</a><ul>
+<li><a class="reference internal" href="#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a></li>
+<li><a class="reference internal" href="#shell-scripts-anaconda-environment">Shell Scripts : Anaconda Environment</a><ul>
+<li><a class="reference internal" href="#linux">Linux</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
+</ul>
+</li>
+</ul>
 
           </div>
-          <div class="page-nav">
-            <div class="inner"><ul class="page-nav">
-  <li class="prev">
-    <a href="requirements.html"
-       title="previous chapter">← Requirements</a>
-  </li>
-  <li class="next">
-    <a href="pydarkstar.html"
-       title="next chapter">pydarkstar →</a>
-  </li>
-</ul><div class="footer" role="contentinfo">
-      &#169; Copyright 2019, Adam Gagorik.
-    <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.7.3.
-</div>
-            </div>
-          </div>
-      </page>
-    </div></div>
-    
-    
-  </body>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    </body>
 </html>

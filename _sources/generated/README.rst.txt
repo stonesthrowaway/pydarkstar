@@ -5,6 +5,8 @@
 
 A set of command-line tools for interacting with a Darkstar server.
 
+-  The pydarkstar code can be found
+   `here <https://github.com/AdamGagorik/pydarkstar>`__.
 -  The pydarkstar website can be found
    `here <http://adamgagorik.github.io/pydarkstar>`__.
 -  The **Setup** instructions can be found
@@ -40,8 +42,7 @@ the forks if the AH implementation remains unchanged.
 -  Buy items put up for sale by players.
 -  Stock the Auction House with items for players to buy.
 
-Command Line
-^^^^^^^^^^^^
+--------------
 
 Here are some links to help you learn how to use a command line.
 
