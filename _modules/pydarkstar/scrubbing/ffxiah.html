@@ -110,7 +110,8 @@
   <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/scrubbing.html">Scrubbing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/advanced.html">Advanced</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../generated/pydarkstar.html">Code</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -175,11 +176,48 @@
 <span class="kn">import</span> <span class="nn">os</span>
 
 
+<span class="n">SERVER_ID</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'bahamut'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">'shiva'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">'titan'</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">'ramuh'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'phoenix'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s1">'carbuncle'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s1">'fenrir'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="s1">'sylph'</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">'valefor'</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="s1">'alexander'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s1">'leviathan'</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="s1">'odin'</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="s1">'ifrit'</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+    <span class="s1">'diabolos'</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+    <span class="s1">'caitsith'</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="s1">'quetzalcoatl'</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="s1">'siren'</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="s1">'unicorn'</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+    <span class="s1">'gilgamesh'</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+    <span class="s1">'ragnarok'</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s1">'pandemonium'</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+    <span class="s1">'garuda'</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+    <span class="s1">'cerberus'</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+    <span class="s1">'kujata'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="s1">'bismarck'</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="s1">'seraph'</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
+    <span class="s1">'lakshmi'</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
+    <span class="s1">'asura'</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
+    <span class="s1">'midgardsormr'</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span>
+    <span class="s1">'fairy'</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">'remora'</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
+    <span class="s1">'hades'</span><span class="p">:</span> <span class="mi">32</span>
+<span class="p">}</span>
+
+<span class="n">ID_SERVER</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">SERVER_ID</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+
 <div class="viewcode-block" id="FFXIAHScrubber"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber">[docs]</a><span class="k">class</span> <span class="nc">FFXIAHScrubber</span><span class="p">(</span><span class="n">Scrubber</span><span class="p">):</span>
     <span class="sd">"""</span>
 <span class="sd">    Get item data from ffxiah.com</span>
 <span class="sd">    """</span>
-
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">FFXIAHScrubber</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
@@ -191,6 +229,7 @@
         <span class="c1"># pickled file names</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span> <span class="o">=</span> <span class="s1">'scrub_item_list.pkl'</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span> <span class="o">=</span> <span class="s1">'scrub_item_info.pkl'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_server_id</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_save</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="nd">@property</span>
@@ -201,7 +240,23 @@
     <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_save</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
-<div class="viewcode-block" id="FFXIAHScrubber.scrub"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.scrub">[docs]</a>    <span class="k">def</span> <span class="nf">scrub</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">threads</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">urls</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">server</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ID_SERVER</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">server_id</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">server_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_server_id</span>
+
+    <span class="nd">@server_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">server_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">SERVER_ID</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">SERVER_ID</span><span class="p">[</span><span class="n">value</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_server_id</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="FFXIAHScrubber.scrub"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.scrub">[docs]</a>    <span class="k">def</span> <span class="nf">scrub</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">threads</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">urls</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">"""</span>
 <span class="sd">        Get item metadata main function.</span>
 
@@ -397,8 +452,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'getting itemids'</span><span class="p">)</span>
 
         <span class="n">items</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">threads</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">threads</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">threads</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">threads</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">threads</span> <span class="o">=</span> <span class="n">threads</span> <span class="k">if</span> <span class="n">threads</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'executing in parallel with threads=</span><span class="si">%s</span><span class="s1">'</span><span class="p">,</span> <span class="s1">'ALL'</span> <span class="k">if</span> <span class="n">threads</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">threads</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">threads</span><span class="p">,</span> <span class="n">thread_name_prefix</span><span class="o">=</span><span class="s1">'ExThread'</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
                 <span class="n">futures</span> <span class="o">=</span> <span class="p">{}</span>
                 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">url</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'submit category </span><span class="si">%02d</span><span class="s1">/</span><span class="si">%02d</span><span class="s1"> : </span><span class="si">%s</span><span class="s1">'</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">),</span> <span class="n">url</span><span class="p">)</span>
@@ -478,7 +535,7 @@
         <span class="k">return</span> <span class="n">items</span>
 
     <span class="c1"># step 3</span>
-    <span class="k">def</span> <span class="nf">_get_item_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemids</span><span class="p">,</span> <span class="n">threads</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_get_item_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemids</span><span class="p">,</span> <span class="n">threads</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">"""</span>
 <span class="sd">        Get metadata for many items.</span>
 
@@ -489,13 +546,14 @@
 <span class="sd">        :type threads: int</span>
 <span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'getting data'</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'threads = </span><span class="si">%d</span><span class="s1">'</span><span class="p">,</span> <span class="n">threads</span><span class="p">)</span>
 
         <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="n">failed</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="c1"># get data from itemids</span>
-        <span class="k">if</span> <span class="n">threads</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">threads</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">threads</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">threads</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">threads</span> <span class="o">=</span> <span class="n">threads</span> <span class="k">if</span> <span class="n">threads</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'executing in parallel with threads=</span><span class="si">%s</span><span class="s1">'</span><span class="p">,</span> <span class="s1">'ALL'</span> <span class="k">if</span> <span class="n">threads</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">threads</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">concurrent</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">threads</span><span class="p">,</span> <span class="n">thread_name_prefix</span><span class="o">=</span><span class="s1">'ExThread'</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
                 <span class="n">futures</span> <span class="o">=</span> <span class="p">{</span>
                     <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_item_data_for_itemid</span><span class="p">,</span> <span class="n">itemid</span><span class="p">,</span>
                                     <span class="n">index</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">itemids</span><span class="p">)):</span> <span class="n">itemid</span>
@@ -541,8 +599,8 @@
         <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_item_url</span><span class="p">(</span><span class="n">itemid</span><span class="p">)</span>
 
         <span class="c1"># create tag soup</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">'open (</span><span class="si">%06d</span><span class="s1">/</span><span class="si">%06d</span><span class="s1">,</span><span class="si">%6.2f</span><span class="s1">) </span><span class="si">%s</span><span class="s1">'</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
-        <span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">'open server=</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%06d</span><span class="s1">/</span><span class="si">%06d</span><span class="s1">,</span><span class="si">%6.2f</span><span class="s1">) </span><span class="si">%s</span><span class="s1">'</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">absolute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">server_id</span><span class="p">)</span>
 
         <span class="c1"># extract name</span>
         <span class="k">try</span><span class="p">:</span>

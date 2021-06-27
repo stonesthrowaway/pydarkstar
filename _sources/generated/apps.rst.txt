@@ -1,5 +1,5 @@
-Apps
-====
+Applications
+============
 
 broker
 ^^^^^^
@@ -151,7 +151,7 @@ scrub
 
     usage: run.py [-h] [--verbose] [--silent] [--overwrite] [--backup]
                   [--urls [url [url ...]]] [--itemids [itemids [itemids ...]]]
-                  [--stock01 5] [--stock12 5] [--threads int]
+                  [--stock01 5] [--stock12 5] [--threads int] [--server str | int]
                   [stub]
     
     Create item database.
@@ -171,5 +171,7 @@ scrub
                             a list of item ids
       --stock01 5           default stock for singles
       --stock12 5           default stock for stacks
-      --threads int         the number of threads to use (default 1)
+      --threads int         the number of threads (default is CPU dependent)
+      --server str | int    the name of the FFXI server to scrub (ex: bahamut)
+                            this can be a string or a number between 1 and 32
     

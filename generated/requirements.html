@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Advanced" href="advanced.html" /><link rel="prev" title="Apps" href="apps.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Advanced" href="advanced.html" /><link rel="prev" title="Applications" href="apps.html" />
 
     <meta name="generator" content="sphinx-4.0.2, furo 2021.06.24.beta37"/>
         <title>Requirements - pydarkstar</title>
@@ -111,7 +111,8 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scrubbing.html">Scrubbing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Applications</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="pydarkstar.html">Code</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -177,17 +178,40 @@
 <li><p>pymysql 0.9.3</p></li>
 <li><p>bs4 4.7.1</p></li>
 <li><p>pyyaml 5.1</p></li>
+<li><p>requests 2.25.1</p></li>
 </ul>
 <p>The easiest way to setup the Python is to create a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda
 environment</a>.
-Do this by using the conda command on the environment.yml file in the
-bin directory. After the environment is created you must activate it
+Do this by using the conda command on the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file in
+the bin directory. After the environment is created you must activate it
 before calling any of the scripts.</p>
 <section id="anaconda-environment">
 <h2>Anaconda Environment<a class="headerlink" href="#anaconda-environment" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; <span class="nb">cd</span> /D <span class="s2">"C:\path\to\pydarkstar\bin"</span>
 &gt; conda env remove --name pydarkstar
 &gt; conda env create -f environment.yml
+</pre></div>
+</div>
+</section>
+<section id="anaconda-environment-fallback">
+<h2>Anaconda Environment Fallback<a class="headerlink" href="#anaconda-environment-fallback" title="Permalink to this headline">¶</a></h2>
+<p>If you want to install each library with conda commands.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name pydarkstar <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+conda activate pydarkstar
+conda install sqlalchemy
+conda install pymysql
+conda install bs4
+conda install pyyaml
+conda install requests
+</pre></div>
+</div>
+<p>If you do not want to use conda you can also try installing things with
+pip.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sqlalchemy
+pip install pymysql
+pip install bs4
+pip install pyyaml
+pip install requests
 </pre></div>
 </div>
 </section>
@@ -213,7 +237,7 @@ before calling any of the scripts.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Apps</div>
+                <div class="title">Applications</div>
                 
               </div>
             </a>
@@ -249,6 +273,7 @@ before calling any of the scripts.</p>
             <ul>
 <li><a class="reference internal" href="#">Requirements</a><ul>
 <li><a class="reference internal" href="#anaconda-environment">Anaconda Environment</a></li>
+<li><a class="reference internal" href="#anaconda-environment-fallback">Anaconda Environment Fallback</a></li>
 </ul>
 </li>
 </ul>

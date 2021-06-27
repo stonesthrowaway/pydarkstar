@@ -111,7 +111,8 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scrubbing.html">Scrubbing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="pydarkstar.html">Code</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -179,11 +180,14 @@
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydarkstar.scrubbing.scrubber.Scrubber.soup">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">soup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/scrubber.html#Scrubber.soup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.scrubbing.scrubber.Scrubber.soup" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">soup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absolute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/scrubbing/scrubber.html#Scrubber.soup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydarkstar.scrubbing.scrubber.Scrubber.soup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open URL and create tag soup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – website string</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – website string</p></li>
+<li><p><strong>absolute</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – perform double get request to find absolute url</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

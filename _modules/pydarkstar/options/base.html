@@ -110,7 +110,8 @@
   <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/scrubbing.html">Scrubbing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/advanced.html">Advanced</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../generated/pydarkstar.html">Code</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -322,7 +323,10 @@
                     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">'key=</span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1">, expecting </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                         <span class="n">k</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
 
-                <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div>
+                <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">'server'</span><span class="p">}:</span>
+                    <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="BaseOptions.dict"><a class="viewcode-back" href="../../../generated/pydarkstar.options.base.html#pydarkstar.options.base.BaseOptions.dict">[docs]</a>    <span class="k">def</span> <span class="nf">dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">"""</span>

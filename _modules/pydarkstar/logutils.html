@@ -110,7 +110,8 @@
   <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/scrubbing.html">Scrubbing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/apps.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/advanced.html">Advanced</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../generated/pydarkstar.html">Code</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -172,11 +173,13 @@
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">logging.handlers</span>
 
-<span class="n">lfmt</span> <span class="o">=</span> <span class="s1">'[</span><span class="si">%(asctime)s</span><span class="s1">][</span><span class="si">%(process)5d</span><span class="s1">][</span><span class="si">%(levelname)-5s</span><span class="s1">]: </span><span class="si">%(message)s</span><span class="s1">'</span>
+<span class="n">lfmt</span> <span class="o">=</span> <span class="s1">'[</span><span class="si">%(asctime)s</span><span class="s1">][</span><span class="si">%(processName)s</span><span class="s1">][</span><span class="si">%(threadName)s</span><span class="s1">][</span><span class="si">%(levelname)-5s</span><span class="s1">]: </span><span class="si">%(message)s</span><span class="s1">'</span>
 <span class="n">dfmt</span> <span class="o">=</span> <span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S"</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">lfmt</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="n">dfmt</span><span class="p">)</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">,</span> <span class="s1">'FATAL'</span><span class="p">)</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span> <span class="s1">'WARN'</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">'requests'</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">'urllib3'</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="set_level"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.set_level">[docs]</a><span class="k">def</span> <span class="nf">set_level</span><span class="p">(</span><span class="n">level</span><span class="p">):</span>

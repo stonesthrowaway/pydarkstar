@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Apps" href="apps.html" /><link rel="prev" title="Setup" href="setup.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Scrubbing" href="scrubbing.html" /><link rel="prev" title="Setup" href="setup.html" />
 
     <meta name="generator" content="sphinx-4.0.2, furo 2021.06.24.beta37"/>
         <title>Usage - pydarkstar</title>
@@ -111,7 +111,8 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scrubbing.html">Scrubbing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="pydarkstar.html">Code</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -188,8 +189,9 @@ bash:~$ ./broker.py
 <section id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>You should set your mysql parameters!</p></li>
 <li><p>Parameters can be set in the config.yaml file</p></li>
-<li><p>You should set your mysql parameters</p></li>
+<li><p>You can also override parameters on the command line</p></li>
 <li><p>Please do not edit source code files to configure your apps</p></li>
 </ul>
 <p id="example-1">Example</p>
@@ -222,6 +224,8 @@ bash:~$ ./broker.py
 <span class="nt">tick</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>              <span class="c1"># seconds between buying</span>
 
 <span class="c1"># scrub</span>
+<span class="nt">server</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bahamut</span>       <span class="c1"># FFXI server to query</span>
+<span class="nt">threads</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-1</span>           <span class="c1"># number of CPU threads</span>
 <span class="nt">itemids</span><span class="p">:</span> <span class="p p-Indicator">[]</span>           <span class="c1"># list of itemids to scrub</span>
 <span class="nt">stock01</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>            <span class="c1"># default stock01 when scrubbing</span>
 <span class="nt">stock12</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>            <span class="c1"># default stock12 when scrubbing</span>
@@ -231,83 +235,14 @@ bash:~$ ./broker.py
 </section>
 <section id="item-database">
 <h2>Item Database<a class="headerlink" href="#item-database" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Item data is stored in <em>items.csv</em></p></li>
-<li><p><em>items.csv</em> is just a simple text file that you can edit with excel</p></li>
-<li><p>The <em>items.csv</em> can be created with the scrub app</p></li>
-<li><p>There is an already generated <em>items.csv</em> in the bin folder for you</p></li>
-<li><p>You do not need to run the <em>scrub</em> app unless you want to recreate
-the database</p></li>
-<li><p>You can change many properties be editing the <em>items.csv.</em> manually</p></li>
-</ul>
-<div class="table-wrapper"><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%"/>
-<col style="width: 56%"/>
-<col style="width: 31%"/>
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>column</p></th>
-<th class="head"><p>description</p></th>
-<th class="head"><p>value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>itemid</p></td>
-<td><p>unique item id</p></td>
-<td><p>integer &gt;=0</p></td>
-</tr>
-<tr class="row-odd"><td><p>name</p></td>
-<td><p>item name</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="row-even"><td><p>sell01</p></td>
-<td><p>sell single?</p></td>
-<td><p>0=false 1=true</p></td>
-</tr>
-<tr class="row-odd"><td><p>buy01</p></td>
-<td><p>buy single?</p></td>
-<td><p>0=false 1=true</p></td>
-</tr>
-<tr class="row-even"><td><p>price01</p></td>
-<td><p>price for single</p></td>
-<td><p>integer &gt;=1</p></td>
-</tr>
-<tr class="row-odd"><td><p>stock01</p></td>
-<td><p>restock count (single)</p></td>
-<td><p>integer &gt;=0</p></td>
-</tr>
-<tr class="row-even"><td><p>rate01</p></td>
-<td><p>buy rate (single) <strong>not used</strong></p></td>
-<td><p>float 0 &lt;= x &lt;= 1</p></td>
-</tr>
-<tr class="row-odd"><td><p>sell12</p></td>
-<td><p>sell stack?</p></td>
-<td><p>0=false 1=true</p></td>
-</tr>
-<tr class="row-even"><td><p>buy12</p></td>
-<td><p>buy stack?</p></td>
-<td><p>0=false 1=true</p></td>
-</tr>
-<tr class="row-odd"><td><p>price12</p></td>
-<td><p>price for stack</p></td>
-<td><p>integer &gt;=1</p></td>
-</tr>
-<tr class="row-even"><td><p>stock12</p></td>
-<td><p>restock count (stack)</p></td>
-<td><p>integer &gt;=0</p></td>
-</tr>
-<tr class="row-odd"><td><p>rate12</p></td>
-<td><p>buy rate (stack) <strong>not used</strong></p></td>
-<td><p>float 0 &lt;= x &lt;= 1</p></td>
-</tr>
-</tbody>
-</table></div>
+<p>Item data is stored in a <strong>CSV</strong> file called <em>items.csv</em>. Please see the
+<a class="reference external" href="./scrubbing.md">scrubbing</a> guide info on generating this <strong>CSV</strong>.</p>
 </section>
 <section id="apps">
 <h2>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>There are many apps</p></li>
+<li><p>You may use the scrub app</p></li>
 <li><p>You will probably only use the broker app</p></li>
 </ul>
 <div class="table-wrapper"><table class="docutils align-default">
@@ -349,12 +284,12 @@ and prices</p></td>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="apps.html">
+          <a class="next-page" href="scrubbing.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Apps</div>
+                <div class="title">Scrubbing</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
